@@ -2,64 +2,35 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>The EVI Project</title>
-  <!-- Font Awesome CDN for social icons -->
+
+  <!-- Google Fonts (example) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <!-- Example: Roboto and Roboto Slab -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Roboto+Slab:wght@400;600&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome for icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
-  <!-- Inline CSS for logo styling -->
-  <style>
-    .logo {
-      width: 150px; /* Adjust to your desired width */
-      height: auto; /* Keeps the aspect ratio intact */
-    }
-    /* Styles for the Buy Me a Coffee section */
-    .support-section {
-      text-align: center;
-      padding: 20px;
-      background-color: #f7f7f7;
-      margin: 20px auto;
-      max-width: 600px;
-      border-radius: 8px;
-    }
-    .support-section img {
-      height: 60px; /* Adjust button size if needed */
-      margin-top: 10px;
-    }
-    /* Additional styling for the navbar */
-    .navbar {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 10px 20px;
-      background-color: #fff;
-    }
-    .nav-links {
-      list-style: none;
-      display: flex;
-      gap: 20px;
-    }
-    .nav-links li a {
-      text-decoration: none;
-      color: #333;
-    }
-    /* Social icons styling */
-    .social-icon {
-      font-size: 1.5rem;
-      margin: 0 10px;
-      color: #333;
-    }
-  </style>
-  <!-- Optionally include your external stylesheet -->
+
+  <!-- Your external CSS file -->
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <!-- Header / Navigation -->
+
+  <!-- Navigation -->
   <header>
     <nav class="navbar">
       <div class="logo-container">
-        <!-- Replace the URL below with your logo file -->
-        <img src="https://i.postimg.cc/9Q0gMPf6/evi-logo.png" alt="The EVI Project Logo" class="logo" />
+        <img 
+          src="https://i.postimg.cc/9Q0gMPf6/evi-logo.png" 
+          alt="The EVI Project Logo" 
+          class="logo" 
+        />
+        <h1 class="site-title">The EVI Project</h1>
       </div>
+
       <ul class="nav-links">
         <li><a href="#about">About</a></li>
         <li><a href="#projects">Projects</a></li>
@@ -71,8 +42,12 @@
   <!-- Hero Section -->
   <section class="hero">
     <div class="hero-content">
-      <h1>The EVI Project</h1>
-      <p>Making it that little bit easier to teach words.</p>
+      <h2 class="hero-title">Making it that little bit easier to teach words.</h2>
+      <p class="hero-subtitle">
+        Empowering educators with high-quality <br />
+        Explicit Vocabulary Instruction resources.
+      </p>
+      <a href="#about" class="btn">Learn More</a>
     </div>
   </section>
 
@@ -80,66 +55,86 @@
   <section id="about" class="about-section">
     <h2>About The EVI Project</h2>
     <p>
-      This project aims to give teachers the resources needed in order to deliver high quality Explicit Vocabulary Instruction (EVI) of critical words. <br><br>
-
-      <strong><i>There are many great ways to teach vocabulary, so what type of vocabulary instruction are you referring to?</i></strong> <br><br>
-      
-      Explicit Vocabulary Instruction is a teaching method that emphasises structured and systematic instruction in critical vocabulary. It aims to maximise student engagement and success by ensuring that students develop a deep understanding of word meanings. This is achieved through direct teaching methods that combine key features of oral and written language, frequent checks for understanding, and systematic scaffolding to reduce reliance on guesswork.
+      This project aims to give teachers the resources needed in order to deliver high quality Explicit Vocabulary Instruction (EVI) of critical words. 
       <br><br>
-      <strong><i>What's included in the resource?</i></strong> <br><br>
-      In the folder, you’ll find a Google Slide file for each word. Each file includes 3 teaching slides and 16 'Check for Understanding' (CFU) retrieval slides. The CFU slides are arranged from easy to hard, allowing you to leverage meaningful and effortful spaced retrieval of the word in various contexts. All slides include a DI script that can be followed to maximize efficiency and impact. <br><br>
-      
-      <strong><i>A little caveat...</i></strong> <br><br>
+      <strong><i>There are many great ways to teach vocabulary, so what type of vocabulary instruction are you referring to?</i></strong> 
+      <br><br>
+      Explicit Vocabulary Instruction is a teaching method that emphasizes structured and systematic instruction in critical vocabulary. It aims to maximize student engagement and success by ensuring that students develop a deep understanding of word meanings. This is achieved through direct teaching methods that combine key features of oral and written language, frequent checks for understanding, and systematic scaffolding to reduce reliance on guesswork.
+      <br><br>
+      <strong><i>What's included in the resource?</i></strong> 
+      <br><br>
+      In the folder, you’ll find a Google Slide file for each word. Each file includes 3 teaching slides and 16 “Check for Understanding” (CFU) retrieval slides. The CFU slides are arranged from easy to hard, allowing you to leverage meaningful and effortful spaced retrieval of the word in various contexts. All slides include a DI script that can be followed to maximize efficiency and impact. 
+      <br><br>
+      <strong><i>A little caveat...</i></strong> 
+      <br><br>
       These slides were created with the assistance of 'Chatty' (ChatGPT) along with some other coding. There may be minor errors, and the images may not always match perfectly, as I'm using a free website API that fetches the most relevant visuals. Please skim through each slide before teaching and adapt it to suit your needs.
       <br><br>
-      <strong><i>In hope for the utopian website</i></strong> <br><br>
+      <strong><i>In hope for the utopian website...</i></strong> 
+      <br><br>
       I’m still working on bringing teachers a tool that will allow them to create these resources themselves for any word they choose. Watch this space.
     </p>
   </section>
 
-  <!-- Projects Section (example) -->
+  <!-- Projects Section -->
   <section id="projects" class="projects-section">
     <h2>Current Projects</h2>
-    <p><strong>
-      <a href="https://drive.google.com/drive/folders/1Zep5JAwYO-9FaCxox3PMx5XV_E6hH0tM" class="btn" target="_blank" style="color: #6a84a6;">
-        Academic Word List (A-D so far)
-      </a>
-      </strong></p>
-    <br>
-    <p><i>Tier 2 Novel and Picture Storybook Word Units – Coming Soon</i></p>
-    <!-- Add your project cards or a grid of images here -->
+    <div class="project-cards">
+      <!-- Example Project Card 1 -->
+      <div class="project-card">
+        <h3>Academic Word List (A-D)</h3>
+        <p>
+          <strong>
+            <a 
+              href="https://drive.google.com/drive/folders/1Zep5JAwYO-9FaCxox3PMx5XV_E6hH0tM" 
+              class="btn" 
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              View Google Drive
+            </a>
+          </strong>
+        </p>
+      </div>
+      <!-- Example Project Card 2 -->
+      <div class="project-card coming-soon">
+        <h3>Tier 2 Novel and Picture Storybook Word Units</h3>
+        <p><em>Coming Soon</em></p>
+      </div>
+    </div>
   </section>
 
-  <!-- Contact Section (example) -->
+  <!-- Contact Section -->
   <section id="contact" class="contact-section">
     <h2>Contact</h2>
     <p>
-      Please send any feedback regarding errors, and I'll fix them as quickly as possible!<br>
-      If you’d like to jump on board to help out, flick me an email at: <br>jake.cowling@ais.ae
+      Please send any feedback regarding errors, and I'll fix them as quickly as possible! 
+      <br>
+      If you’d like to jump on board to help out, flick me an email at: 
+      <br>
+      <strong>jake.cowling@ais.ae</strong>
     </p>
 
-    <!-- Social icons -->
-    <a
-      href="https://www.linkedin.com/in/jake-cowling-1096a1208/"
-      class="social-icon"
-      target="_blank"
-      rel="noopener noreferrer"
-      aria-label="LinkedIn"
-    >
-      <i class="fab fa-linkedin-in"></i>
-    </a>
+    <div class="social-icons">
+      <a
+        href="https://www.linkedin.com/in/jake-cowling-1096a1208/"
+        class="social-icon"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="LinkedIn"
+      >
+        <i class="fab fa-linkedin-in"></i>
+      </a>
 
-    <a
-      href="https://x.com/JakeCowling"
-      class="social-icon"
-      target="_blank"
-      rel="noopener noreferrer"
-      aria-label="X"
-    >
-      <i class="fab fa-twitter"></i>
-    </a>
-    
-    <!-- Add a contact form or your contact details here -->
+      <a
+        href="https://x.com/JakeCowling"
+        class="social-icon"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="X"
+      >
+        <i class="fab fa-twitter"></i>
+      </a>
+    </div>
   </section>
 
   <!-- Footer -->
@@ -147,7 +142,7 @@
     <p>&copy; 2025 The EVI Project. All rights reserved.</p>
   </footer>
 
-  <!-- Optional JavaScript File -->
+  <!-- Optionally include your external JS file if needed -->
   <script src="script.js"></script>
 </body>
 </html>
