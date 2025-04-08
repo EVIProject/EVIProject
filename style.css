@@ -191,6 +191,16 @@ header {
   font-size: 1.25rem;
 }
 
+/* Styles specific to the ChatGPT card icon */
+.project-card a.btn i {
+  font-size: 1.5em;      /* Increase icon size */
+  margin-right: 0.5em;   /* Spacing between the icon and text */
+}
+
+.project-card a.btn:hover i {
+  color: var(--brand-color-dark);
+}
+
 /**************************************************************
   6. Contact Section
 ***************************************************************/
