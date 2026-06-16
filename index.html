@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
@@ -6,19 +7,23 @@
   <title>The EVI Project</title>
 
   <!-- Google Fonts -->
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Roboto+Slab:wght@400;600&display=swap" rel="stylesheet">
 
   <!-- Font Awesome for icons -->
+
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
 
   <!-- Your external CSS file -->
+
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
   <!-- Navigation -->
+
   <header>
     <nav class="navbar">
       <div class="logo-container">
@@ -29,15 +34,20 @@
         />
       </div>
 
-      <ul class="nav-links">
-        <li><a href="#about">About</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-    </nav>
+```
+  <ul class="nav-links">
+    <li><a href="#about">About</a></li>
+    <li><a href="#video">Webinar</a></li>
+    <li><a href="#projects">Projects</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+</nav>
+```
+
   </header>
 
   <!-- Hero Section -->
+
   <section class="hero">
     <div class="hero-content">
       <h2 class="hero-title">Making it that little bit easier to teach words.</h2>
@@ -50,6 +60,7 @@
   </section>
 
   <!-- About Section -->
+
   <section id="about" class="about-section">
     <h2>About The EVI Project</h2>
     <p>
@@ -73,54 +84,83 @@
     </p>
   </section>
 
+  <!-- Webinar Section -->
+
+  <section id="video" class="video-section">
+    <h2>Explicit Vocabulary Instruction Webinar</h2>
+    <p>
+      This webinar gives an overview of explicit vocabulary instruction and explains how the resources on this website can be used to support planning, teaching, and classroom practice. It also breaks down the structure of the EVI resources and how teachers can use them effectively with students.
+    </p>
+
+```
+<div class="video-wrapper">
+  <iframe 
+    src="https://www.youtube.com/embed/anN5UvrWqWM"
+    title="Explicit Vocabulary Instruction Webinar"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+    allowfullscreen>
+  </iframe>
+</div>
+```
+
+  </section>
+
   <!-- Projects Section -->
+
   <section id="projects" class="projects-section">
     <h2>Current Projects</h2>
     <div class="project-cards">
-      <!-- Project Card 1 -->
-      <div class="project-card">
-        <h3>Academic Word List (A-F)</h3>
-        <p>
-          <strong>
-            <a 
-              href="https://drive.google.com/drive/folders/1Zep5JAwYO-9FaCxox3PMx5XV_E6hH0tM" 
-              class="btn" 
-              target="_blank" 
-              rel="noopener noreferrer"
-            >
-              View Google Drive
-            </a>
-          </strong>
-        </p>
-        <br><p><em>Under construction</em></p>
-      </div>
-      
-      <!-- Project Card 2 -->
-      <div class="project-card coming-soon">
-        <h3>Tier 2 Novel and Picture Storybook Word Units</h3>
-        <p><em>Coming Soon</em></p>
-      </div>
-      
-      <!-- New ChatGPT Icon Project Card -->
-      <div class="project-card">
-        <h3>
-          <a 
-            href="https://chatgpt.com/g/g-jiam4r9gc-explicit-vocabulary-instruction-deck-outline-2-0" 
-            target="_blank" 
-            rel="noopener noreferrer" 
-            class="btn"
-          >
-            <i class="fa-solid fa-robot"></i> Instructional Activity Creator
-          </a>
-        </h3>
-        <p>
-          A specialised GPT that creates instructional activities for any word. Simply prompt it with a word, and if you’d like more after its output, prompt it with “more”.
-        </p>
-      </div>
-    </div>
+
+```
+  <!-- Project Card 1 -->
+  <div class="project-card">
+    <h3>Academic Word List (A-F)</h3>
+    <p>
+      <strong>
+        <a 
+          href="https://drive.google.com/drive/folders/1Zep5JAwYO-9FaCxox3PMx5XV_E6hH0tM" 
+          class="btn" 
+          target="_blank" 
+          rel="noopener noreferrer"
+        >
+          View Google Drive
+        </a>
+      </strong>
+    </p>
+    <br>
+    <p><em>Under construction</em></p>
+  </div>
+  
+  <!-- Project Card 2 -->
+  <div class="project-card coming-soon">
+    <h3>Tier 2 Novel and Picture Storybook Word Units</h3>
+    <p><em>Coming Soon</em></p>
+  </div>
+  
+  <!-- ChatGPT Icon Project Card -->
+  <div class="project-card">
+    <h3>
+      <a 
+        href="https://chatgpt.com/g/g-jiam4r9gc-explicit-vocabulary-instruction-deck-outline-2-0" 
+        target="_blank" 
+        rel="noopener noreferrer" 
+        class="btn"
+      >
+        <i class="fa-solid fa-robot"></i> Instructional Activity Creator
+      </a>
+    </h3>
+    <p>
+      A specialised GPT that creates instructional activities for any word. Simply prompt it with a word, and if you’d like more after its output, prompt it with “more”.
+    </p>
+  </div>
+
+</div>
+```
+
   </section>
 
   <!-- Contact Section -->
+
   <section id="contact" class="contact-section">
     <h2>Contact</h2>
     <p>
@@ -131,35 +171,41 @@
       <strong>j.cowling_gns@gemsedu.com</strong>
     </p>
 
-    <div class="social-icons">
-      <a
-        href="https://www.linkedin.com/in/jake-cowling-1096a1208/"
-        class="social-icon"
-        target="_blank"
-        rel="noopener noreferrer"
-        aria-label="LinkedIn"
-      >
-        <i class="fab fa-linkedin-in"></i>
-      </a>
+```
+<div class="social-icons">
+  <a
+    href="https://www.linkedin.com/in/jake-cowling-1096a1208/"
+    class="social-icon"
+    target="_blank"
+    rel="noopener noreferrer"
+    aria-label="LinkedIn"
+  >
+    <i class="fab fa-linkedin-in"></i>
+  </a>
 
-      <a
-        href="https://x.com/JakeCowling"
-        class="social-icon"
-        target="_blank"
-        rel="noopener noreferrer"
-        aria-label="X"
-      >
-        <i class="fab fa-twitter"></i>
-      </a>
-    </div>
+  <a
+    href="https://x.com/JakeCowling"
+    class="social-icon"
+    target="_blank"
+    rel="noopener noreferrer"
+    aria-label="X"
+  >
+    <i class="fab fa-twitter"></i>
+  </a>
+</div>
+```
+
   </section>
 
   <!-- Footer -->
+
   <footer>
     <p>&copy; 2025 The EVI Project. All rights reserved.</p>
   </footer>
 
   <!-- Optionally include your external JS file if needed -->
+
   <script src="script.js"></script>
+
 </body>
 </html>
