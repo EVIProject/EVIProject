@@ -1,275 +1,467 @@
 /**************************************************************
-
-1. Root Variables & Global Styles
-   ***************************************************************/
-   :root {
-   --brand-color: #6a84a6;      /* Your brand's color */
-   --brand-color-dark: #5a7091; /* Slightly darker for hover states */
-   --text-color: #333;          /* Main text color */
-   --white-color: #fff;
-   --light-bg: #f5f5f5;
-   --font-primary: 'Roboto', sans-serif;
-   --font-secondary: 'Roboto Slab', serif;
-   }
+ 1. Root Variables & Global Styles
+ **************************************************************/
+:root {
+  --brand-color: #6a84a6;
+  --brand-color-dark: #4f6788;   /* darker for hover + AA-contrast text */
+  --brand-tint: #eef2f7;
+  --text-color: #333;
+  --muted-text: #5c6470;
+  --white-color: #fff;
+  --light-bg: #f5f5f5;
+  --font-primary: 'Roboto', sans-serif;
+  --font-secondary: 'Roboto Slab', serif;
+  --radius: 8px;
+  --header-height: 76px;
+}
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  }
-
-body {
-font-family: var(--font-primary);
-color: var(--text-color);
-background-color: var(--light-bg);
-line-height: 1.6;
 }
 
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: calc(var(--header-height) + 1rem); /* anchors land below sticky header */
+}
+
+body {
+  font-family: var(--font-primary);
+  color: var(--text-color);
+  background-color: var(--light-bg);
+  line-height: 1.6;
+}
+
+img { max-width: 100%; }
+
+a:focus-visible,
+button:focus-visible {
+  outline: 3px solid var(--brand-color-dark);
+  outline-offset: 3px;
+}
+
+.skip-link {
+  position: absolute;
+  left: 1rem;
+  top: -100px;
+  background: var(--white-color);
+  color: var(--brand-color-dark);
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  z-index: 100;
+}
+.skip-link:focus { top: 1rem; }
+
 /**************************************************************
-2. Navigation Bar
-***************************************************************/
-header {
-background-color: var(--white-color);
-box-shadow: 0 2px 10px rgba(0, 0, 0, 0.06);
+ 2. Navigation Bar
+ **************************************************************/
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background-color: var(--white-color);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.06);
 }
 
 .navbar {
-display: flex;
-justify-content: space-between;
-align-items: center;
-padding: 1rem 2rem;
-max-width: 1200px;
-margin: 0 auto;
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.75rem 2rem;
+  max-width: 1200px;
+  min-height: var(--header-height);
+  margin: 0 auto;
 }
 
 .logo-container {
-display: flex;
-align-items: center;
-gap: 1rem;
+  display: flex;
+  align-items: center;
 }
 
 .logo {
-height: 50px;
-width: auto;
-}
-
-.site-title {
-font-family: var(--font-secondary);
-font-weight: 600;
-font-size: 1.25rem;
-color: var(--brand-color);
-letter-spacing: 1px;
+  height: 50px;
+  width: auto;
 }
 
 .nav-links {
-list-style: none;
-display: flex;
-gap: 1.5rem;
+  list-style: none;
+  display: flex;
+  gap: 1.75rem;
 }
 
-.nav-links li a {
-text-decoration: none;
-color: var(--text-color);
-font-weight: 500;
-transition: color 0.3s ease;
+.nav-links a {
+  text-decoration: none;
+  color: var(--text-color);
+  font-weight: 500;
+  padding: 0.25rem 0;
+  border-bottom: 2px solid transparent;
+  transition: color 0.2s ease, border-color 0.2s ease;
 }
 
-.nav-links li a:hover {
-color: var(--brand-color);
+.nav-links a:hover {
+  color: var(--brand-color-dark);
+  border-bottom-color: var(--brand-color);
+}
+
+.nav-toggle {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  color: var(--text-color);
+  cursor: pointer;
+  padding: 0.5rem;
 }
 
 /**************************************************************
-3. Hero Section
-***************************************************************/
+ 3. Hero Section
+ **************************************************************/
 .hero {
-background: linear-gradient(
-rgba(106, 132, 166, 0.9),
-rgba(106, 132, 166, 0.7)
-), url('https://images.unsplash.com/photo-1499933374294-4584851497a0?ixlib=rb-4.0.3&auto=format&fit=crop&w=1950&q=80');
-background-size: cover;
-background-position: center;
-text-align: center;
-padding: 6rem 1rem;
-color: var(--white-color);
+  background:
+    linear-gradient(rgba(79, 103, 136, 0.92), rgba(106, 132, 166, 0.78)),
+    url('https://images.unsplash.com/photo-1499933374294-4584851497a0?ixlib=rb-4.0.3&auto=format&fit=crop&w=1950&q=80');
+  background-size: cover;
+  background-position: center;
+  text-align: center;
+  padding: 6rem 1.5rem;
+  color: var(--white-color);
 }
 
 .hero-content {
-max-width: 800px;
-margin: 0 auto;
+  max-width: 800px;
+  margin: 0 auto;
 }
 
 .hero-title {
-font-family: var(--font-secondary);
-font-size: 2.5rem;
-font-weight: 700;
-margin-bottom: 1rem;
-letter-spacing: 1px;
+  font-family: var(--font-secondary);
+  font-size: clamp(1.9rem, 5vw, 2.75rem);
+  font-weight: 700;
+  line-height: 1.25;
+  margin-bottom: 1rem;
 }
 
 .hero-subtitle {
-font-size: 1.25rem;
-font-weight: 400;
-margin-bottom: 2rem;
+  font-size: clamp(1.05rem, 2.5vw, 1.25rem);
+  max-width: 34ch;
+  margin: 0 auto 2rem;
+}
+
+.hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
 }
 
 /**************************************************************
-4. Button Styles
-***************************************************************/
+ 4. Buttons
+ **************************************************************/
 .btn {
-display: inline-block;
-background-color: var(--white-color);
-color: var(--brand-color);
-padding: 0.75rem 1.5rem;
-border-radius: 4px;
-text-decoration: none;
-font-weight: 700;
-transition: background-color 0.3s ease, color 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background-color: var(--white-color);
+  color: var(--brand-color-dark);
+  border: 2px solid var(--white-color);
+  padding: 0.75rem 1.5rem;
+  border-radius: 4px;
+  text-decoration: none;
+  font-weight: 700;
+  transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease, transform 0.2s ease;
 }
 
 .btn:hover {
-background-color: var(--brand-color-dark);
-color: var(--white-color);
+  background-color: var(--brand-color-dark);
+  border-color: var(--brand-color-dark);
+  color: var(--white-color);
+  transform: translateY(-1px);
+}
+
+.btn-outline {
+  background-color: transparent;
+  color: var(--white-color);
+}
+
+.btn-primary {
+  background-color: var(--brand-color-dark);
+  border-color: var(--brand-color-dark);
+  color: var(--white-color);
+}
+
+.btn-primary:hover {
+  background-color: #3e5372;
+  border-color: #3e5372;
+}
+
+.btn i { font-size: 0.9em; }
+
+/**************************************************************
+ 5. Sections
+ **************************************************************/
+.section {
+  padding: 3.5rem 2rem;
+  text-align: center;
+  background-color: var(--white-color);
+  margin: 2rem auto;
+  max-width: 1200px;
+  border-radius: var(--radius);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+.section h2 {
+  margin-bottom: 1.25rem;
+  font-family: var(--font-secondary);
+  font-weight: 600;
+  font-size: clamp(1.6rem, 4vw, 2rem);
+  color: var(--brand-color-dark);
+}
+
+.lead {
+  max-width: 720px;
+  margin: 0 auto 2rem;
+  font-size: 1.1rem;
+  color: var(--muted-text);
+}
+
+/* About */
+.stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  max-width: 800px;
+  margin: 0 auto 2.5rem;
+}
+
+.stat {
+  background: var(--brand-tint);
+  border-radius: var(--radius);
+  padding: 1.25rem 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.stat-number {
+  font-family: var(--font-secondary);
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--brand-color-dark);
+  line-height: 1.1;
+}
+
+.stat-label {
+  font-size: 0.9rem;
+  color: var(--muted-text);
+}
+
+.faq {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+.faq h3 {
+  font-family: var(--font-secondary);
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: var(--brand-color-dark);
+  margin: 2rem 0 0.5rem;
+}
+
+.faq h3:first-child { margin-top: 0; }
+
+.faq p { line-height: 1.8; }
+
+.note {
+  display: flex;
+  gap: 0.75rem;
+  background: #fff8e6;
+  border-left: 4px solid #e0b34a;
+  padding: 1rem 1.25rem;
+  border-radius: 4px;
+}
+
+.note i {
+  color: #b8861b;
+  margin-top: 0.35rem;
 }
 
 /**************************************************************
-5. Main Section Styles
-***************************************************************/
-.about-section,
-.video-section,
-.projects-section,
-.contact-section {
-padding: 3rem 2rem;
-text-align: center;
-background-color: var(--white-color);
-margin: 2rem auto;
-max-width: 1200px;
-border-radius: 8px;
-box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
-}
-
-.about-section h2,
-.video-section h2,
-.projects-section h2,
-.contact-section h2 {
-margin-bottom: 1.5rem;
-font-family: var(--font-secondary);
-font-weight: 600;
-font-size: 2rem;
-color: var(--brand-color);
-}
-
-.about-section p,
-.video-section p {
-text-align: left;
-line-height: 1.8;
-font-size: 1rem;
-max-width: 800px;
-margin: 0 auto 2rem;
-padding: 0 1rem;
-}
-
-/**************************************************************
-6. Webinar Video Section
-***************************************************************/
+ 6. Webinar Video
+ **************************************************************/
 .video-wrapper {
-position: relative;
-width: 100%;
-max-width: 900px;
-margin: 0 auto;
-padding-bottom: 56.25%; /* 16:9 video ratio */
-height: 0;
-overflow: hidden;
-border-radius: 8px;
-box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
+  max-width: 900px;
+  margin: 0 auto;
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
+  background: #000;
 }
 
 .video-wrapper iframe {
-width: 100%;
-aspect-ratio: 16 / 9;
-height: auto;
-display: block;
-border: none;
-border-radius: 8px;
+  display: block;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  border: none;
 }
 
 /**************************************************************
-7. Projects Section
-***************************************************************/
+ 7. Projects
+ **************************************************************/
 .project-cards {
-display: grid;
-grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-gap: 2rem;
-margin-top: 2rem;
-max-width: 1000px;
-margin-left: auto;
-margin-right: auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  max-width: 1000px;
+  margin: 1.5rem auto 0;
 }
 
 .project-card {
-background-color: var(--light-bg);
-border-radius: 8px;
-padding: 2rem;
-text-align: center;
-box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.75rem;
+  background-color: var(--light-bg);
+  border-radius: var(--radius);
+  padding: 2.5rem 1.75rem 2rem;
+  text-align: center;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
 }
 
 .project-card h3 {
-font-family: var(--font-secondary);
-color: var(--brand-color);
-margin-bottom: 1rem;
-font-weight: 600;
-font-size: 1.25rem;
+  font-family: var(--font-secondary);
+  color: var(--brand-color-dark);
+  font-weight: 600;
+  font-size: 1.25rem;
+  line-height: 1.35;
 }
 
-/* Styles specific to the ChatGPT card icon */
-.project-card a.btn i {
-font-size: 1.5em;      /* Increase icon size */
-margin-right: 0.5em;   /* Spacing between the icon and text */
+.project-card p {
+  color: var(--muted-text);
+  flex-grow: 1;        /* keeps buttons aligned along the bottom */
 }
 
-.project-card a.btn:hover i {
-color: var(--brand-color-dark);
+.project-icon {
+  font-size: 2rem;
+  color: var(--brand-color);
 }
+
+.project-card.coming-soon { opacity: 0.8; }
+.project-card.coming-soon:hover { transform: none; }
+
+.badge {
+  position: absolute;
+  top: 0.9rem;
+  right: 0.9rem;
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  padding: 0.2rem 0.6rem;
+  border-radius: 999px;
+}
+
+.badge-live     { background: #dff3e4; color: #1f6b35; }
+.badge-progress { background: #fff1d6; color: #8a5a00; }
+.badge-soon     { background: #e4e7ec; color: #4a5260; }
 
 /**************************************************************
-8. Contact Section
-***************************************************************/
+ 8. Contact
+ **************************************************************/
 .contact-section p {
-max-width: 600px;
-margin: 0 auto 2rem;
-line-height: 1.6;
-font-size: 1rem;
+  max-width: 600px;
+  margin: 0 auto 1.5rem;
 }
 
-/* Social Icons */
+.contact-section .btn-primary {
+  word-break: break-all;
+}
+
 .social-icons {
-display: flex;
-justify-content: center;
-gap: 2rem;
+  display: flex;
+  justify-content: center;
+  gap: 1.25rem;
+  margin-top: 2rem;
 }
 
 .social-icon {
-font-size: 1.5rem;
-color: var(--text-color);
-transition: color 0.3s ease;
+  display: grid;
+  place-items: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: var(--brand-tint);
+  font-size: 1.25rem;
+  color: var(--brand-color-dark);
+  transition: background-color 0.2s ease, color 0.2s ease;
 }
 
 .social-icon:hover {
-color: var(--brand-color);
+  background: var(--brand-color-dark);
+  color: var(--white-color);
 }
 
 /**************************************************************
-9. Footer
-***************************************************************/
+ 9. Footer
+ **************************************************************/
 footer {
-background-color: var(--brand-color);
-color: var(--white-color);
-text-align: center;
-padding: 1rem;
-margin-top: 2rem;
+  background-color: var(--brand-color-dark);
+  color: var(--white-color);
+  text-align: center;
+  padding: 1.25rem;
+  margin-top: 2rem;
 }
 
-footer p {
-font-size: 0.9rem;
-margin: 0;
+footer p { font-size: 0.9rem; }
+
+/**************************************************************
+ 10. Responsive
+ **************************************************************/
+@media (max-width: 720px) {
+  .navbar { padding: 0.75rem 1rem; }
+
+  .nav-toggle { display: block; }
+
+  .nav-links {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    flex-direction: column;
+    gap: 0;
+    background: var(--white-color);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.08);
+  }
+
+  .nav-links.open { display: flex; }
+
+  .nav-links a {
+    display: block;
+    padding: 0.9rem 1.5rem;
+    border-bottom: 1px solid #eee;
+  }
+
+  .hero { padding: 4rem 1rem; }
+
+  .section {
+    margin: 1rem;
+    padding: 2.5rem 1.25rem;
+  }
+
+  .stats { grid-template-columns: 1fr; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  * { transition: none !important; }
 }

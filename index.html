@@ -1,211 +1,226 @@
 <!DOCTYPE html>
-
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>The EVI Project</title>
+  <title>The EVI Project | Explicit Vocabulary Instruction Resources</title>
+  <meta name="description" content="Free, ready-to-teach Explicit Vocabulary Instruction (EVI) slide decks for teachers, with scripted teaching slides and spaced retrieval checks for understanding." />
+
+  <!-- Social sharing previews -->
+  <meta property="og:title" content="The EVI Project" />
+  <meta property="og:description" content="Making it that little bit easier to teach words. Free Explicit Vocabulary Instruction resources for teachers." />
+  <meta property="og:image" content="https://i.postimg.cc/9Q0gMPf6/evi-logo.png" />
+  <meta property="og:type" content="website" />
+  <link rel="icon" href="https://i.postimg.cc/9Q0gMPf6/evi-logo.png" />
 
   <!-- Google Fonts -->
-
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Roboto+Slab:wght@400;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Roboto+Slab:wght@400;600;700&display=swap" rel="stylesheet">
 
   <!-- Font Awesome for icons -->
-
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
-
-  <!-- Your external CSS file -->
 
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
+  <a class="skip-link" href="#main">Skip to content</a>
+
   <!-- Navigation -->
+  <header class="site-header">
+    <nav class="navbar" aria-label="Main">
+      <a href="#top" class="logo-container" aria-label="The EVI Project home">
+        <img src="https://i.postimg.cc/9Q0gMPf6/evi-logo.png" alt="The EVI Project logo" class="logo" />
+      </a>
 
-  <header>
-    <nav class="navbar">
-      <div class="logo-container">
-        <img 
-          src="https://i.postimg.cc/9Q0gMPf6/evi-logo.png" 
-          alt="The EVI Project Logo" 
-          class="logo"
-        />
-      </div>
+      <button class="nav-toggle" aria-expanded="false" aria-controls="nav-links" aria-label="Open menu">
+        <i class="fa-solid fa-bars" aria-hidden="true"></i>
+      </button>
 
-```
-  <ul class="nav-links">
-    <li><a href="#about">About</a></li>
-    <li><a href="#video">Webinar</a></li>
-    <li><a href="#projects">Projects</a></li>
-    <li><a href="#contact">Contact</a></li>
-  </ul>
-</nav>
-```
-
+      <ul class="nav-links" id="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#video">Webinar</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
   </header>
 
   <!-- Hero Section -->
-
-  <section class="hero">
+  <section class="hero" id="top">
     <div class="hero-content">
-      <h2 class="hero-title">Making it that little bit easier to teach words.</h2>
+      <h1 class="hero-title">Making it that little bit easier to teach words.</h1>
       <p class="hero-subtitle">
-        Empowering educators with high-quality <br />
+        Empowering educators with high-quality
         Explicit Vocabulary Instruction resources.
       </p>
-      <a href="#about" class="btn">Learn More</a>
+      <div class="hero-actions">
+        <a href="#projects" class="btn">Get the Resources</a>
+        <a href="#about" class="btn btn-outline">Learn More</a>
+      </div>
     </div>
   </section>
 
-  <!-- About Section -->
+  <main id="main">
 
-  <section id="about" class="about-section">
-    <h2>About The EVI Project</h2>
-    <p>
-      This project aims to give teachers the resources needed in order to deliver high quality Explicit Vocabulary Instruction (EVI) of critical words. 
-      <br><br>
-      <strong><i>There are many great ways to teach vocabulary, so what type of vocabulary instruction are you referring to?</i></strong> 
-      <br><br>
-      Explicit Vocabulary Instruction is a teaching method that emphasises structured and systematic instruction in critical vocabulary. It aims to maximise student engagement and success by ensuring that students develop a deep understanding of word meanings. This is achieved through direct teaching methods that combine key features of oral and written language, frequent checks for understanding, and systematic scaffolding to reduce reliance on guesswork.
-      <br><br>
-      <strong><i>What's included in the resource?</i></strong> 
-      <br><br>
-      In the folder, you’ll find a Google Slide file for each word. Each file includes 3 teaching slides and 16 “Check for Understanding” (CFU) retrieval slides. The CFU slides are arranged from easy to hard, allowing you to leverage meaningful and effortful spaced retrieval of the word in various contexts. All slides include a DI script that can be followed to maximize efficiency and impact. 
-      <br><br>
-      <strong><i>A little caveat...</i></strong> 
-      <br><br>
-      These slides were created with the assistance of 'Chatty' (ChatGPT) along with some other coding. There may be minor errors, and the images may not always match perfectly, as I'm using a free website API that fetches the most relevant visuals. Please skim through each slide before teaching and adapt it to suit your needs.
-      <br><br>
-      <strong><i>In hope for the utopian website...</i></strong> 
-      <br><br>
-      I’m still working on bringing teachers a tool that will allow them to create these resources themselves for any word they choose. Watch this space.
-    </p>
-  </section>
+    <!-- About Section -->
+    <section id="about" class="section about-section">
+      <h2>About The EVI Project</h2>
+      <p class="lead">
+        This project aims to give teachers the resources they need to deliver high-quality
+        Explicit Vocabulary Instruction (EVI) of critical words.
+      </p>
 
-  <!-- Webinar Section -->
+      <div class="stats">
+        <div class="stat"><span class="stat-number">3</span><span class="stat-label">teaching slides per word</span></div>
+        <div class="stat"><span class="stat-number">16</span><span class="stat-label">CFU retrieval slides, easy to hard</span></div>
+        <div class="stat"><span class="stat-number">DI</span><span class="stat-label">script included on every slide</span></div>
+      </div>
 
-  <section id="video" class="video-section">
-    <h2>Explicit Vocabulary Instruction Webinar</h2>
-    <p>
-      This webinar gives an overview of explicit vocabulary instruction and explains how the resources on this website can be used to support planning, teaching, and classroom practice. It also breaks down the structure of the EVI resources and how teachers can use them effectively with students.
-    </p>
+      <div class="faq">
+        <h3>There are many great ways to teach vocabulary, so what type of instruction is this?</h3>
+        <p>
+          Explicit Vocabulary Instruction is a teaching method built on structured, systematic instruction
+          in critical vocabulary. It aims to maximise student engagement and success by making sure students
+          develop a deep understanding of word meanings. It does this through direct teaching that combines
+          key features of oral and written language, frequent checks for understanding, and systematic
+          scaffolding to reduce reliance on guesswork.
+        </p>
 
-```
-<div class="video-wrapper">
-  <iframe 
-    src="https://www.youtube.com/embed/anN5UvrWqWM"
-    title="Explicit Vocabulary Instruction Webinar"
-    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-    allowfullscreen>
-  </iframe>
-</div>
-```
+        <h3>What's included in the resource?</h3>
+        <p>
+          In the folder, you'll find a Google Slides file for each word. Each file includes 3 teaching slides
+          and 16 "Check for Understanding" (CFU) retrieval slides. The CFU slides are arranged from easy to hard,
+          so you can use meaningful, effortful spaced retrieval of the word in a range of contexts. All slides
+          include a DI script you can follow to maximise efficiency and impact.
+        </p>
 
-  </section>
+        <h3>A little caveat...</h3>
+        <p class="note">
+          <i class="fa-solid fa-circle-info" aria-hidden="true"></i>
+          <span>
+            These slides were created with the help of 'Chatty' (ChatGPT) along with some other coding. There may be
+            minor errors, and the images may not always match perfectly, because I'm using a free image API that fetches
+            the most relevant visuals. Please skim through each slide before teaching and adapt it to suit your needs.
+          </span>
+        </p>
 
-  <!-- Projects Section -->
+        <h3>In hope of the utopian website...</h3>
+        <p>
+          I'm still working on a tool that will let teachers create these resources themselves for any word
+          they choose. Watch this space.
+        </p>
+      </div>
+    </section>
 
-  <section id="projects" class="projects-section">
-    <h2>Current Projects</h2>
-    <div class="project-cards">
+    <!-- Webinar Section -->
+    <section id="video" class="section video-section">
+      <h2>Explicit Vocabulary Instruction Webinar</h2>
+      <p class="lead">
+        This webinar gives an overview of explicit vocabulary instruction and explains how the resources on this
+        website can support planning, teaching and classroom practice. It also breaks down the structure of the
+        EVI resources and how teachers can use them effectively with students.
+      </p>
 
-```
-  <!-- Project Card 1 -->
-  <div class="project-card">
-    <h3>Academic Word List (A-F)</h3>
-    <p>
-      <strong>
-        <a 
-          href="https://drive.google.com/drive/folders/1Zep5JAwYO-9FaCxox3PMx5XV_E6hH0tM" 
-          class="btn" 
-          target="_blank" 
-          rel="noopener noreferrer"
-        >
-          View Google Drive
-        </a>
-      </strong>
-    </p>
-    <br>
-    <p><em>Under construction</em></p>
-  </div>
-  
-  <!-- Project Card 2 -->
-  <div class="project-card coming-soon">
-    <h3>Tier 2 Novel and Picture Storybook Word Units</h3>
-    <p><em>Coming Soon</em></p>
-  </div>
-  
-  <!-- ChatGPT Icon Project Card -->
-  <div class="project-card">
-    <h3>
-      <a 
-        href="https://chatgpt.com/g/g-jiam4r9gc-explicit-vocabulary-instruction-deck-outline-2-0" 
-        target="_blank" 
-        rel="noopener noreferrer" 
-        class="btn"
-      >
-        <i class="fa-solid fa-robot"></i> Instructional Activity Creator
+      <div class="video-wrapper">
+        <iframe
+          src="https://www.youtube-nocookie.com/embed/anN5UvrWqWM"
+          title="Explicit Vocabulary Instruction Webinar"
+          loading="lazy"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowfullscreen>
+        </iframe>
+      </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="section projects-section">
+      <h2>Current Projects</h2>
+
+      <div class="project-cards">
+
+        <article class="project-card">
+          <span class="badge badge-progress">In progress</span>
+          <i class="fa-brands fa-google-drive project-icon" aria-hidden="true"></i>
+          <h3>Academic Word List (A–F)</h3>
+          <p>Ready-to-teach Google Slides decks for words from the Academic Word List. More words are added regularly.</p>
+          <a href="https://drive.google.com/drive/folders/1Zep5JAwYO-9FaCxox3PMx5XV_E6hH0tM"
+             class="btn btn-primary" target="_blank" rel="noopener noreferrer">
+            View Google Drive <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i>
+          </a>
+        </article>
+
+        <article class="project-card">
+          <span class="badge badge-live">Live</span>
+          <i class="fa-solid fa-robot project-icon" aria-hidden="true"></i>
+          <h3>Instructional Activity Creator</h3>
+          <p>A specialised GPT that creates instructional activities for any word. Prompt it with a word, and if you'd like more after its output, prompt it with "more".</p>
+          <a href="https://chatgpt.com/g/g-jiam4r9gc-explicit-vocabulary-instruction-deck-outline-2-0"
+             class="btn btn-primary" target="_blank" rel="noopener noreferrer">
+            Open the GPT <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i>
+          </a>
+        </article>
+
+        <article class="project-card coming-soon">
+          <span class="badge badge-soon">Coming soon</span>
+          <i class="fa-solid fa-book-open project-icon" aria-hidden="true"></i>
+          <h3>Tier 2 Novel and Picture Storybook Word Units</h3>
+          <p>Vocabulary units built around the Tier 2 words found in popular novels and picture storybooks.</p>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section contact-section">
+      <h2>Contact</h2>
+      <p>
+        Please send me any feedback about errors and I'll fix them as quickly as possible!
+        If you'd like to jump on board and help out, flick me an email.
+      </p>
+
+      <a class="btn btn-primary" href="mailto:j.cowling_gns@gemsedu.com?subject=The%20EVI%20Project">
+        <i class="fa-solid fa-envelope" aria-hidden="true"></i> j.cowling_gns@gemsedu.com
       </a>
-    </h3>
-    <p>
-      A specialised GPT that creates instructional activities for any word. Simply prompt it with a word, and if you’d like more after its output, prompt it with “more”.
-    </p>
-  </div>
 
-</div>
-```
+      <div class="social-icons">
+        <a href="https://www.linkedin.com/in/jake-cowling-1096a1208/" class="social-icon"
+           target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+          <i class="fa-brands fa-linkedin-in" aria-hidden="true"></i>
+        </a>
+        <a href="https://x.com/JakeCowling" class="social-icon"
+           target="_blank" rel="noopener noreferrer" aria-label="X (formerly Twitter)">
+          <i class="fa-brands fa-x-twitter" aria-hidden="true"></i>
+        </a>
+      </div>
+    </section>
 
-  </section>
-
-  <!-- Contact Section -->
-
-  <section id="contact" class="contact-section">
-    <h2>Contact</h2>
-    <p>
-      Please send any feedback regarding errors, and I'll fix them as quickly as possible! 
-      <br>
-      If you’d like to jump on board to help out, flick me an email at: 
-      <br>
-      <strong>j.cowling_gns@gemsedu.com</strong>
-    </p>
-
-```
-<div class="social-icons">
-  <a
-    href="https://www.linkedin.com/in/jake-cowling-1096a1208/"
-    class="social-icon"
-    target="_blank"
-    rel="noopener noreferrer"
-    aria-label="LinkedIn"
-  >
-    <i class="fab fa-linkedin-in"></i>
-  </a>
-
-  <a
-    href="https://x.com/JakeCowling"
-    class="social-icon"
-    target="_blank"
-    rel="noopener noreferrer"
-    aria-label="X"
-  >
-    <i class="fab fa-twitter"></i>
-  </a>
-</div>
-```
-
-  </section>
-
-  <!-- Footer -->
+  </main>
 
   <footer>
-    <p>&copy; 2025 The EVI Project. All rights reserved.</p>
+    <p>&copy; <span id="year">2026</span> The EVI Project. All rights reserved.</p>
   </footer>
 
-  <!-- Optionally include your external JS file if needed -->
+  <script>
+    // Mobile menu toggle
+    const toggle = document.querySelector('.nav-toggle');
+    const links = document.getElementById('nav-links');
+    toggle.addEventListener('click', () => {
+      const open = links.classList.toggle('open');
+      toggle.setAttribute('aria-expanded', open);
+      toggle.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
+    });
+    links.addEventListener('click', (e) => {
+      if (e.target.closest('a')) {
+        links.classList.remove('open');
+        toggle.setAttribute('aria-expanded', 'false');
+      }
+    });
 
-  <script src="script.js"></script>
+    // Keep the footer year current
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
 
 </body>
 </html>
